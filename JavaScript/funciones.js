@@ -75,12 +75,16 @@ function obtenerFormularioJquery() {
     } else {
         $("#errores").empty()
         var data = {
-            nombre: nombre,
-            vacuna: vacuna,
+            nombre:nombre,
+            vacuna:vacuna,
             precio:precio,
             fecha:fecha,
             proxDosis:proxDosis
-          }
+        }
+        Pageclip.send('nNb5eybLXSIg3NjGtq0ZkQZt2jcGq4dW','Vacunas',data,function (error,response){
+            console.log('error?', error, '; response:', error || response)
+            
+        })
         
     }
     return false

@@ -81,9 +81,10 @@ function obtenerFormularioJquery() {
             fecha:fecha,
             proxDosis:proxDosis
         }
+        console.log(data)
         Pageclip.send('nNb5eybLXSIg3NjGtq0ZkQZt2jcGq4dW','Vacunas',data,function (error,response){
             console.log('error?', error, '; response:', error || response)
-            
+
         })
         
     }
